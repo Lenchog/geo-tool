@@ -1,6 +1,6 @@
 # we take two sides and whether either is a hypotenuse,
 # then use pythagoras' theorem to calculate what's missing
-def pythogoras():
+def pythagoras():
     side1 = int(input("Give me one side of the triangle\n"))
     side2 = int(input("Alright, how long is it?\n"))
     # are we trying to find the hypotenuse, or another side? if so, different formula

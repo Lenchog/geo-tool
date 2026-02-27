@@ -1,7 +1,7 @@
 import math
 from area import area
 from pythagoras import pythagoras
-from identify_triangles import identify_triangles
+from identifyTriangle import identifyTriangle
 
 def main():
     print("Welcome to this mathematical program")
@@ -18,7 +18,9 @@ def main():
             case 'a' | 'area': area(),
             case 'p' | 'pythagoras': pythagoras(),
             case 't' | 'triangle': identifyTriangle(),
-            case 'q' | 'quit': print('Goodbye!'),
+            case 'q' | 'quit':
+                print('Goodbye!'),
+                quit()
             case _: print("Invalid command")
 
 if __name__ == "__main__":
