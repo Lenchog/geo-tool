@@ -1,3 +1,6 @@
+from lib import getInt
+import math
+
 # asks for the shape, then calls other functions to figure out area and prints it
 def area():
     command = ''
@@ -18,12 +21,12 @@ def area():
 # takes the width and height to simply calculate the area of a theoretical rectangle
 # also useful with triangle calculations
 def areaRectangle():
-    width = int(input("How wide is your shape?"))
-    length = int(input("How tall is your shape?"))
+    width = getInt("How wide is your shape?")
+    length = getInt("How tall is your shape?")
     return width * length
 
 # use πr^2 to calculate the area of the circle
 def areaCircle():
-    radius = int(input("What is the radius?\n"))
+    radius = getInt("What is the radius?")
     return math.pi * radius * radius
 

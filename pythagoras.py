@@ -1,8 +1,8 @@
 # we take two sides and whether either is a hypotenuse,
 # then use pythagoras' theorem to calculate what's missing
 def pythagoras():
-    side1 = int(input("Give me one side of the triangle\n"))
-    side2 = int(input("Alright, how long is it?\n"))
+    side1 = getInt("Give me one side of the triangle")
+    side2 = getInt("Alright, how long is it?")
     # are we trying to find the hypotenuse, or another side? if so, different formula
     if y in input("Are either of these the hypotenuse?").lower():
         hypotenuse = largest(side1, side2)

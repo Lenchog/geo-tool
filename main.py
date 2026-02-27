@@ -1,4 +1,3 @@
-import math
 from area import area
 from pythagoras import pythagoras
 from identifyTriangle import identifyTriangle
