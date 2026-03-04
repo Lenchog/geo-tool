@@ -4,8 +4,8 @@ from lib import getInt
 # we take two sides and whether either is a hypotenuse,
 # then use pythagoras' theorem to calculate what's missing
 def pythagoras():
-    side1 = int(getInt("Give me one side of the triangle"))
-    side2 = int(getInt("Alright, give me another?"))
+    side1 = getInt("Give me one side of the triangle")
+    side2 = getInt("Alright, give me another?")
     hyp = input("Are you finding the hypotenuse?\n").lower()
     unknown_side = pythag_maths(side1, side2, hyp)
     print(f"The unknown side is {unknown_side} units long!")
