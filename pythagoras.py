@@ -6,8 +6,8 @@ from lib import getInt
 def pythagoras():
     side1 = getInt("Give me one side of the triangle")
     side2 = getInt("Alright, give me another?")
-    hyp = input("Are you finding the hypotenuse?\n").lower()
-    unknown_side = pythag_maths(side1, side2, hyp)
+    unknown_is_hyp = input("Are you finding the hypotenuse?\n").lower()
+    unknown_side = pythag_maths(side1, side2, unknown_is_hyp)
     print(f"The unknown side is {unknown_side} units long!")
     
 def pythag_maths(side1: int, side2: int, unknown_is_hyp):
