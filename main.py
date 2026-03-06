@@ -9,15 +9,16 @@ def main():
     # bolds characters.
     # What would you like to do?
     # Area | Pythagoras | Triangle Identification | Quit
-    command = input(f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Q{end}uit\n").lower()
-    match command:
-        case 'a' | 'area': area(),
-        case 'p' | 'pythagoras': pythagoras(),
-        case 't' | 'triangle': classifyTriangleModule(),
-        case 'q' | 'quit':
-            print('Goodbye!'),
-            quit()
-        case _: print("Invalid command")
+    while True:
+        command = input(f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Q{end}uit\n").lower()
+        match command:
+            case 'a' | 'area': area(),
+            case 'p' | 'pythagoras': pythagoras(),
+            case 't' | 'triangle': classifyTriangleModule(),
+            case 'q' | 'quit':
+                print('Goodbye!'),
+                quit()
+            case _: print("Invalid command")
 
 if __name__ == "__main__":
     main()
