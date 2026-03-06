@@ -5,7 +5,6 @@ import math
 def area():
     command = ''
     while command != 'q':
-        # TODO reduce repeated code
         command = input("Which shape would you like to calculate the area of?\n")
         if 'circle' in command: 
             radius = getInt("What is the radius?")
@@ -27,14 +26,14 @@ def area():
         
 # 1/2 * base * height
 def areaTriangle(base, height):
-    return 1/2 * base * height 
+    return round(1/2 * base * height, 2)
 
 # takes the width and height to simply calculate the area of a theoretical rectangle
 # also useful with triangle calculations
 def areaRectangle(width: int, length: int):
-    return width * length
+    return round(width * length, 2)
 
 # use πr^2 to calculate the area of the circle
 def areaCircle(radius: int):
-    return math.pi * radius * radius
+    return round(math.pi * radius * radius, 2)
 

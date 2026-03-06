@@ -22,8 +22,8 @@ def pythag_maths(side1: int, side2: int, unknown_is_hyp):
             known_side = side1
         # a^2 + b^2 = c^2
         # a = sqrt(c^2 - b^2)
-        return math.sqrt(hypotenuse * hypotenuse - known_side * known_side)
+        return round(math.sqrt(hypotenuse * hypotenuse - known_side * known_side), 2)
     else:
         # a^2 + b^2 = c^2
         # c = sqrt(a^2 + b^2)
-        return math.sqrt(side1 * side1 + side2 * side2)
+        return round(math.sqrt(side1 * side1 + side2 * side2), 2)

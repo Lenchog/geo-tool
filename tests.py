@@ -11,8 +11,8 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(pythag_maths(5, 4, 'n'), 3)
 
     def test_circle_area(self):
-        self.assertEqual(round(areaCircle(5), 5), 78.53982)
-        self.assertEqual(areaCircle(1), math.pi)
+        self.assertEqual(areaCircle(5), 78.54)
+        self.assertEqual(areaCircle(1), 3.14)
         
     def test_triangle_area(self):
         self.assertEqual(areaTriangle(5, 4), 10)
