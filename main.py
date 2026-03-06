@@ -1,6 +1,6 @@
 from area import area
 from pythagoras import pythagoras
-from identifyTriangle import identifyTriangle
+from classifyTriangle import classifyTriangleModule
 
 def main():
     print("Welcome to this mathematical program")
@@ -13,7 +13,7 @@ def main():
     match command:
         case 'a' | 'area': area(),
         case 'p' | 'pythagoras': pythagoras(),
-        case 't' | 'triangle': identifyTriangle(),
+        case 't' | 'triangle': classifyTriangleModule(),
         case 'q' | 'quit':
             print('Goodbye!'),
             quit()

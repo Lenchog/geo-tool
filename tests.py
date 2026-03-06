@@ -1,8 +1,8 @@
 import unittest
 import math
 from area import areaCircle, areaTriangle, areaRectangle
-from lib import validateInt
 from pythagoras import pythag_maths
+from lib import validateInt
 
 class TestStringMethods(unittest.TestCase):
     def test_pythag(self):

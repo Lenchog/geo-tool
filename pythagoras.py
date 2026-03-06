@@ -1,15 +1,15 @@
 import math
 from lib import getInt
 
-# we take two sides and whether either is a hypotenuse,
-# then use pythagoras' theorem to calculate what's missing
+# we take two sides and whether either is a hypotenuse, and feed it into our maths function
 def pythagoras():
+    unknown_is_hyp = input("Are you finding the hypotenuse?\n").lower()
     side1 = getInt("Give me one side of the triangle")
     side2 = getInt("Alright, give me another?")
-    unknown_is_hyp = input("Are you finding the hypotenuse?\n").lower()
     unknown_side = pythag_maths(side1, side2, unknown_is_hyp)
     print(f"The unknown side is {unknown_side} units long!")
     
+# use pythagoras' theorem to calculate what's missing
 def pythag_maths(side1: int, side2: int, unknown_is_hyp):
      # are we trying to find the hypotenuse, or another side? if so, different formula
     if 'n' in unknown_is_hyp: # one of the sides given are the hypotenuse
