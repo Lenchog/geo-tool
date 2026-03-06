@@ -2,6 +2,7 @@ import unittest
 import math
 from area import areaCircle, areaTriangle, areaRectangle
 from pythagoras import pythag_maths
+from classifyTriangle import classifyTriangle
 from lib import validateInt
 
 class TestStringMethods(unittest.TestCase):
@@ -20,6 +21,13 @@ class TestStringMethods(unittest.TestCase):
     def test_rectangle_area(self):
         self.assertEqual(areaRectangle(5, 4), 20)
         self.assertEqual(areaRectangle(1, 1), 1)
+
+    def test_classify_triangles(self):
+        self.assertEqual(classifyTriangle([3, 4, 5]), "Right Angled")
+        self.assertEqual(classifyTriangle([3, 3, 3]), "Equilateral")
+        self.assertEqual(classifyTriangle([2, 3, 4]), "Scalene")
+        self.assertEqual(classifyTriangle([3, 3, 4]), "Isosceles")
+        self.assertEqual(classifyTriangle([1, 1, 2]), "Impossible")
         
     # every time an integer is inputted it runs through this.
     # therefore we don't need to test these cases for everything else

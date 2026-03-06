@@ -1,5 +1,6 @@
 from lib import getInt
-
+from enum import Enum
+ 
 # This code is taken from Mr Dwyer's example
  
 # This subroutine will get three sides from the user
@@ -31,27 +32,24 @@ def classifyTriangle(sides):
 
     # Check for impossible triangle
     if sides[0] + sides[1] <= sides[2]:
-        print("This is an impossible triangle")
+        return "Impossible"
 
     # Check for equilateral triangle
     elif sides[0] == sides[1] and sides[0] == sides[2]:
-        print("This is an equilateral triangle")
+        return "Equilateral"
 
     # It will be scalene or isoscelles, These can also be right-angled
+    # Check for right angled
+    if (sides[0] ** 2) + (sides[1] ** 2) == sides[2] ** 2:
+        return "Right Angled"
+    # Check for isoscelles
+    elif (sides[0] == sides[1] or
+        sides[0] == sides[2] or
+        sides[1] == sides[2]):
+        return "Isosceles"
     else:
+        return "Scalene"
 
-        # Check for isoscelles
-        if (sides[0] == sides[1] or
-            sides[0] == sides[2] or
-            sides[1] == sides[2]):
-
-            print("This is an isoceles triangle")
-        else:
-            print("This is a scalene triangle")
-
-        # Check for right angled
-        if (sides[0] ** 2) + (sides[1] ** 2) == sides[2] ** 2:
-            print("This is also a right-angled triangle")
 
 
 # This is the controlling module for the classify triangles feature
@@ -68,7 +66,7 @@ def classifyTriangleModule():
         for i in range(3):
             sides[i] = int(sides[i])
         sides.sort()
-        classifyTriangle(sides)
+        print(f"This is a {classifyTriangle(sides)} triangle") 
 
         # Ask if user wants to continue
         print("")
