@@ -12,7 +12,11 @@ def pythagoras():
 # use pythagoras' theorem to calculate what's missing
 def pythag_maths(side1: int, side2: int, unknown_is_hyp):
      # are we trying to find the hypotenuse, or another side? if so, different formula
-    if 'n' in unknown_is_hyp: # one of the sides given are the hypotenuse
+    if 'y' in unknown_is_hyp: # one of the sides given are the hypotenuse
+        # a^2 + b^2 = c^2
+        # c = sqrt(a^2 + b^2)
+        return round(math.sqrt(side1 * side1 + side2 * side2), 2)
+    else:
         # TODO find function to do this quicker
         if side1 > side2:
             hypotenuse = side1
@@ -23,7 +27,3 @@ def pythag_maths(side1: int, side2: int, unknown_is_hyp):
         # a^2 + b^2 = c^2
         # a = sqrt(c^2 - b^2)
         return round(math.sqrt(hypotenuse * hypotenuse - known_side * known_side), 2)
-    else:
-        # a^2 + b^2 = c^2
-        # c = sqrt(a^2 + b^2)
-        return round(math.sqrt(side1 * side1 + side2 * side2), 2)
