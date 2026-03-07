@@ -1,3 +1,4 @@
+from areaQuiz import areaQuiz
 from area import area
 from pythagoras import pythagoras
 from classifyTriangle import classifyTriangleModule
@@ -10,11 +11,12 @@ def main():
     # What would you like to do?
     # Area | Pythagoras | Triangle Identification | Quit
     while True:
-        command = input(f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Q{end}uit\n").lower()
+        command = input(f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Quiz{end} | {bold}Q{end}uit\n").lower()
         match command:
             case 'a' | 'area': area(),
             case 'p' | 'pythagoras': pythagoras(),
             case 't' | 'triangle': classifyTriangleModule(),
+            case 'quiz': areaQuiz(),
             case 'q' | 'quit':
                 print('Goodbye!'),
                 quit()
