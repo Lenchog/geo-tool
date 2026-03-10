@@ -1,4 +1,4 @@
-from lib import getInt
+from geoTool.lib import getInt
 from enum import Enum
  
 # This code is taken from Mr Dwyer's example

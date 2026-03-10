@@ -1,4 +1,4 @@
-from lib import getInt
+from geoTool.lib import getInt
 import math
 
 # asks for the shape, then calls other functions to figure out area and prints it

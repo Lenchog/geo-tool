@@ -1,5 +1,5 @@
 import math
-from lib import getInt
+from geoTool.lib import getInt
 
 # we take two sides and whether either is a hypotenuse, and feed it into our maths function
 def pythagoras():

@@ -1,7 +1,7 @@
-from areaQuiz import areaQuiz
-from area import area
-from pythagoras import pythagoras
-from classifyTriangle import classifyTriangleModule
+from geoTool.areaQuiz import areaQuiz
+from geoTool.area import area
+from geoTool.pythagoras import pythagoras
+from geoTool.classifyTriangle import classifyTriangleModule
 
 def main():
     print("Welcome to this mathematical program")

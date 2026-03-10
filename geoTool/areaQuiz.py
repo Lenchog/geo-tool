@@ -1,5 +1,5 @@
 import random
-from lib import getInt 
+from geoTool.lib import getInt 
 
 def areaQuiz():
     print("Welcome to the Area Quiz!\nYou'll be asked 10 questions about the area of a random shape")

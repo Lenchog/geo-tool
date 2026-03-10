@@ -1,9 +1,10 @@
 import unittest
 import math
-from area import areaCircle, areaTriangle, areaRectangle
-from pythagoras import pythag_maths
-from classifyTriangle import classifyTriangle
-from lib import validateInt
+import geoTool
+from geoTool.lib import validateInt
+from geoTool.area import areaCircle, areaTriangle, areaRectangle
+from geoTool.pythagoras import pythag_maths
+from geoTool.classifyTriangle import classifyTriangle
 
 class TestStringMethods(unittest.TestCase):
     def test_pythag(self):
