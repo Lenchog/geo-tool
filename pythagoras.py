@@ -6,6 +6,7 @@ def pythagoras():
     unknown_is_hyp = input("Are you finding the hypotenuse?\n").lower()
     side1 = getInt("Give me one side of the triangle")
     side2 = getInt("Alright, give me another?")
+
     unknown_side = pythag_maths(side1, side2, unknown_is_hyp)
     print(f"The unknown side is {unknown_side} units long!")
     
@@ -24,6 +25,7 @@ def pythag_maths(side1: int, side2: int, unknown_is_hyp):
         else:
             hypotenuse = side2
             known_side = side1
+
         # a^2 + b^2 = c^2
         # a = sqrt(c^2 - b^2)
         return round(math.sqrt(hypotenuse * hypotenuse - known_side * known_side), 2)

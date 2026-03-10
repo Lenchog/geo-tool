@@ -12,6 +12,7 @@ def main():
     # Area | Pythagoras | Triangle Identification | Quit
     while True:
         command = input(f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Quiz{end} | {bold}Q{end}uit\n").lower()
+
         match command:
             case 'a' | 'area': area(),
             case 'p' | 'pythagoras': pythagoras(),
