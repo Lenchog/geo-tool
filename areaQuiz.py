@@ -5,6 +5,7 @@ def areaQuiz():
     print("Welcome to the Area Quiz!\nYou'll be asked 10 questions about the area of a random shape")
     correctAnswers = 0
     questions = 10
+
     for i in range(1, questions):
         print(f"Question {i}:")
         # we'll use the dimensions no matter the shape (excluding y in the case of square)
