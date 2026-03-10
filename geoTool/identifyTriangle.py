@@ -1,3 +1,5 @@
+from geoTool.lib import getInt
+
 # This code is taken from Mr Dwyer's example
  
 # This subroutine will accept a valid list of three side lengths of type
@@ -35,6 +37,11 @@ def classifyTriangle(sides):
         if (sides[0] ** 2) + (sides[1] ** 2) == sides[2] ** 2:
             print("This is also a right-angled triangle")
 
+def getTriangleSides():
+    sides = []
+    for i in range(3):
+        sides[i] = getInt()
+    return sides
 
 # This is the controlling module for the identify triangles feature
 def identifyTrianglesModule():
@@ -47,13 +54,10 @@ def identifyTrianglesModule():
         # If the sides are valid, convert to a sorted integer list
         #   and classify them
         # Otherwise print an error
-        if validateSides(sides):
-            for i in range(3):
-                sides[i] = int(sides[i])
-            sides.sort()
-            classifyTriangle(sides)
-        else:
-            print("Please enter side lengths as positive integers")
+        for i in range(3):
+            sides[i] = int(sides[i])
+        sides.sort()
+        classifyTriangle(sides)
 
         # Ask if user wants to continue
         print("")
