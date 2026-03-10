@@ -1,5 +1,6 @@
 import random
 from geoTool.lib import getInt 
+from geoTool.area import areaTriangle, areaRectangle
 
 def areaQuiz():
     print("Welcome to the Area Quiz!\nYou'll be asked 10 questions about the area of a random shape")
@@ -18,16 +19,16 @@ def areaQuiz():
             # rectangle
             case 0:
                 userAnswer = getInt(f"What's the area of a rectangle that's {x} units wide, and {y} units tall?")
-                answer = x*y
+                answer = areaRectangle(x, y)
             # triangle
             case 1:
                 userAnswer = getInt(f"What's the area of a triangle that's got a base of {x} units, and is {y} units tall?")
                 shape = "Triangle"
-                answer = x*y/2
+                answer = areaTriangle(x, y)
             # square
             case 2:
                 userAnswer = getInt(f"What's the area of a square with sides {x} units long?")
-                answer = x*x
+                answer = areaRectangle(x, x)
           
         if userAnswer == answer:
             print("That's right!")
