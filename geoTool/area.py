@@ -5,6 +5,7 @@ import math
 def area():
     command = ''
     while command != 'q':
+        # for each we ask for the variables we need, and print the result
         command = input("Which shape would you like to calculate the area of?\n")
         if 'circle' in command: 
             radius = getInt("What is the radius?")

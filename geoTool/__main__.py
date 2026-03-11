@@ -3,12 +3,13 @@ from geoTool.area import area
 from geoTool.pythagoras import pythagoras
 from geoTool.classifyTriangle import classifyTriangleModule
 
+# main menu, ask for command. Either letters or words in upper or lowercase will work
 def main():
     print("Welcome to this mathematical program")
     bold = "\033[1m"
     end = "\033[0m"
     # bolds characters.
-    # What would you like to do?
+    # What would you like to do? Renders as:
     # Area | Pythagoras | Triangle Identification | Quit
     while True:
         command = input(f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Quiz{end} | {bold}Q{end}uit\n").lower()
