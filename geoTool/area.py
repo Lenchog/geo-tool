@@ -27,14 +27,14 @@ def area():
         
 # 1/2 * base * height
 def areaTriangle(base, height):
-    return round(1/2 * base * height, 2)
+    return 1/2 * base * height
 
 # takes the width and height to simply calculate the area of a theoretical rectangle
 # also useful with triangle calculations
 def areaRectangle(width: int, length: int):
-    return round(width * length, 2)
+    return width * length
 
 # use πr^2 to calculate the area of the circle
 def areaCircle(radius: int):
-    return round(math.pi * radius * radius, 2)
+    return round(math.pi * radius**2, 2)
 
