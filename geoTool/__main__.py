@@ -14,19 +14,20 @@ def main():
     # Area | Pythagoras | Triangle Identification | Quit
     while True:
         command = input(
-            f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Quiz{end} | {bold}Q{end}uit\n"
+            f"What would you like to do?\n{bold}A{end}rea | {bold}P{end}ythogoras | {bold}T{end}riangle Identification | {bold}Q{end}uiz | {bold}E{end}xit\n"
         ).lower()
 
-        match command:
-            case "a" | "area":
+        # look at the first letter of the input to catch a wide variety of cases
+        match command[0]:
+            case "a":
                 area()
-            case "p" | "pythagoras":
+            case "p":
                 pythagoras()
-            case "t" | "triangle":
+            case "t":
                 classifyTriangleModule()
-            case "quiz":
+            case "q":
                 areaQuiz()
-            case "q" | "quit":
+            case "e":
                 print("Goodbye!")
                 quit()
             case _:

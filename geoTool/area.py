@@ -6,24 +6,27 @@ import math
 def area():
     while True:
         # for each we ask for the variables we need, and print the result
-        shape = input("Which shape would you like to calculate the area of?\n")
-        if "circle" in shape:
-            radius = getInt("What is the radius?")
-            area = areaCircle(radius)
-        elif "square" in shape:
-            width = getInt("Give a side length of the square")
-            area = areaRectangle(width, width)
-        elif "triangle" in shape:
-            height = getInt("How tall is the triangle?")
-            base = getInt("How wide is the base of the triangle?")
-            area = areaTriangle(height, base)
-        elif "rectangle" in shape:
-            width = getInt("How wide is your rectangle?")
-            height = getInt("How tall is your rectangle?")
-            area = areaRectangle(width, height)
-        # if the user wants to quit, it's not invalid. however, we don't need to handle the q case
-        else:
-            break
+        print("Which shape would you like to calculate the area of?")
+        shape = input("Circle, square, rectangle or triangle\n")
+        # look at the first letter of the input to catch a wide variety of cases
+        match shape[0].lower():
+            case "c":  # circle
+                radius = getInt("What is the radius?")
+                area = areaCircle(radius)
+            case "s":  # square
+                width = getInt("Give a side length of the square")
+                area = areaRectangle(width, width)
+            case "t":  # triangle
+                height = getInt("How tall is the triangle?")
+                base = getInt("How wide is the base of the triangle?")
+                area = areaTriangle(height, base)
+            case "r":  # rectangle
+                width = getInt("How wide is your rectangle?")
+                height = getInt("How tall is your rectangle?")
+                area = areaRectangle(width, height)
+            # otherwise quit, it's not invalid. however, we don't need to handle the q case
+            case _:
+                break
         print(f"It's {area} squared units!")
 
 
