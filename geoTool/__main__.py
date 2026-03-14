@@ -10,7 +10,8 @@ def main():
     bold = "\033[1m"
     end = "\033[0m"
     # bolds characters.
-    # What would you like to do? Renders as:
+    # Renders as:
+    # What would you like to do?
     # Area | Pythagoras | Triangle Identification | Quit
     while True:
         command = input(
