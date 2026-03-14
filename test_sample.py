@@ -1,24 +1,23 @@
 import unittest
-import math
-import geoTool
 from geoTool.lib import validateInt
 from geoTool.area import areaCircle, areaTriangle, areaRectangle
 from geoTool.pythagoras import pythag_maths
 from geoTool.classifyTriangle import classifyTriangle
 
+
 class TestStringMethods(unittest.TestCase):
     def test_pythag(self):
-        self.assertEqual(pythag_maths(3, 4, 'y'), 5)
-        self.assertEqual(pythag_maths(5, 4, 'n'), 3)
+        self.assertEqual(pythag_maths(3, 4, "y"), 5)
+        self.assertEqual(pythag_maths(5, 4, "n"), 3)
 
     def test_circle_area(self):
         self.assertEqual(areaCircle(5), 78.54)
         self.assertEqual(areaCircle(1), 3.14)
-        
+
     def test_triangle_area(self):
         self.assertEqual(areaTriangle(5, 4), 10)
-        self.assertEqual(areaTriangle(1, 1), 1/2)
-        
+        self.assertEqual(areaTriangle(1, 1), 1 / 2)
+
     def test_rectangle_area(self):
         self.assertEqual(areaRectangle(5, 4), 20)
         self.assertEqual(areaRectangle(1, 1), 1)
@@ -29,7 +28,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(classifyTriangle([2, 3, 4]), "Scalene")
         self.assertEqual(classifyTriangle([3, 3, 4]), "Isosceles")
         self.assertEqual(classifyTriangle([1, 1, 2]), "Impossible")
-        
+
     # every time an integer is inputted it runs through this.
     # therefore we don't need to test these cases for everything else
     def test_validate_int(self):
@@ -41,5 +40,6 @@ class TestStringMethods(unittest.TestCase):
             validateInt(0.9)
             validateInt(-1)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

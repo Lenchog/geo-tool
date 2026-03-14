@@ -1,6 +1,7 @@
 import math
 from geoTool.lib import getInt
 
+
 # we take two sides and whether either is a hypotenuse, and feed it into our maths function
 def pythagoras():
     # this is the information we need
@@ -11,11 +12,12 @@ def pythagoras():
     # we calculate with the below function
     unknown_side = pythag_maths(side1, side2, unknown_is_hyp)
     print(f"The unknown side is {unknown_side} units long!")
-    
+
+
 # use pythagoras' theorem to calculate what's missing
 def pythag_maths(side1: int, side2: int, unknown_is_hyp):
-     # are we trying to find the hypotenuse, or another side? if so, different formula
-    if 'y' in unknown_is_hyp: # one of the sides given are the hypotenuse
+    # are we trying to find the hypotenuse, or another side? if so, different formula
+    if "y" in unknown_is_hyp:  # one of the sides given are the hypotenuse
         # a^2 + b^2 = c^2
         # c = sqrt(a^2 + b^2)
         return round(math.sqrt(side1 * side1 + side2 * side2), 2)

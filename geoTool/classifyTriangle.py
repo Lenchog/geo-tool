@@ -1,8 +1,9 @@
 from geoTool.lib import getInt
 from enum import Enum
- 
+
 # This code is taken from Mr Dwyer's example
- 
+
+
 # This subroutine will get three sides from the user
 # These will be returned in a list of strings
 def getTriangleSides():
@@ -18,6 +19,7 @@ def getTriangleSides():
     print("")
 
     return sides
+
 
 # This subroutine will accept a valid list of three side lengths of type
 #    integer in ascending order
@@ -43,13 +45,10 @@ def classifyTriangle(sides):
     if (sides[0] ** 2) + (sides[1] ** 2) == sides[2] ** 2:
         return "Right Angled"
     # Check for isoscelles
-    elif (sides[0] == sides[1] or
-        sides[0] == sides[2] or
-        sides[1] == sides[2]):
+    elif sides[0] == sides[1] or sides[0] == sides[2] or sides[1] == sides[2]:
         return "Isosceles"
     else:
         return "Scalene"
-
 
 
 # This is the controlling module for the classify triangles feature
@@ -57,7 +56,6 @@ def classifyTriangleModule():
 
     cont = "y"
     while cont == "y":
-
         sides = getTriangleSides()
 
         # If the sides are valid, convert to a sorted integer list
@@ -66,9 +64,13 @@ def classifyTriangleModule():
         for i in range(3):
             sides[i] = int(sides[i])
         sides.sort()
-        print(f"This is a {classifyTriangle(sides)} triangle") 
+        print(f"This is a {classifyTriangle(sides)} triangle")
 
         # Ask if user wants to continue
         print("")
-        cont = input(("Enter 'y' to continue with triangle classifications. "
-                      "Or any other key to return to the main menu: "))
+        cont = input(
+            (
+                "Enter 'y' to continue with triangle classifications. "
+                "Or any other key to return to the main menu: "
+            )
+        )
