@@ -24,7 +24,7 @@ def area():
                 width = getInt("How wide is your rectangle?")
                 height = getInt("How tall is your rectangle?")
                 area = areaRectangle(width, height)
-            # otherwise quit, it's not invalid. however, we don't need to handle the q case
+            # otherwise quit, it's invalid
             case _:
                 break
         print(f"It's {area} squared units!")
