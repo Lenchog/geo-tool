@@ -6,8 +6,14 @@ import math
 def area():
     while True:
         # for each we ask for the variables we need, and print the result
+        bold = "\033[1m"
+        end = "\033[0m"
+        # bolds characters.
+        # What would you like to do? Renders as:
         print("Which shape would you like to calculate the area of?")
-        shape = input("Circle, square, rectangle or triangle\n")
+        shape = input(
+            f"{bold}C{end}ircle, {bold}S{end}quare, {bold}R{end}ectangle or {bold}T{end}riangle\n"
+        )
         # look at the first letter of the input to catch a wide variety of cases
         match shape[0].lower():
             case "c":  # circle
